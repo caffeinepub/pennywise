@@ -1,0 +1,10 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with routes for home, brands, and providers pages, all wrapped in a Layout component.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component providing consistent header navigation with logo, page links, and footer with attribution across all pages.",
+  "frontend/src/pages/HomePage.tsx": "Landing page featuring hero section, feature highlights, and call-to-action sections to guide users to brands and providers.",
+  "frontend/src/pages/BrandsPage.tsx": "Displays all brands in a responsive grid with cards showing brand logos, names, and descriptions, with loading and error states.",
+  "frontend/src/pages/ProvidersPage.tsx": "Shows virtual assistant providers sorted by payment rate with contact dialog, badges for top providers, and detailed provider information cards.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks for fetching brands and providers from the backend with proper actor initialization and caching.",
+  "frontend/src/index.css": "Global styles with warm professional OKLCH color palette featuring amber/orange primary colors and earthy tones for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom warm color tokens, varied border radii, custom font families, and enhanced shadow utilities."
+}

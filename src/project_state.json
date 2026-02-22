@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Pennywise: A platform where brands are listed and clients can contact virtual assistant providers, who are listed/ranked according to payment per client",
+  "architectural_notes": [
+    "Multi-role system: brands, clients, and virtual assistant providers",
+    "Payment-based ranking system for virtual assistant providers"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-frontend-page-that-displays-a-list-of-all-brands-with-their-name-description-and-logo",
+      "title": "Create a frontend page that displays a list of all Brands with their name, description, and logo",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-frontend-page-that-displays-virtual-assistant-providers-listed-in-order-of-payment-per-client-showing-name-description-payment-rate-and-contact-information",
+      "title": "Create a frontend page that displays Virtual Assistant Providers listed in order of payment per client, showing name, description, payment rate, and contact information",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-contact-mechanism-on-the-frontend-that-allows-clients-to-initiate-contact-with-a-selected-virtual-assistant-provider",
+      "title": "Implement a contact mechanism on the frontend that allows clients to initiate contact with a selected Virtual Assistant Provider",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-cohesive-visual-theme-with-warm-professional-colors-avoiding-blue-and-purple-modern-typography-and-a-clean-layout-that-emphasizes-trust-and-professionalism-suitable-for-a-business-services-platform",
+      "title": "Design a cohesive visual theme with warm, professional colors (avoiding blue and purple), modern typography, and a clean layout that emphasizes trust and professionalism suitable for a business services platform",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Display list of brands",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Allow clients to contact virtual assistant providers",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "List virtual assistant providers sorted by payment per client",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Create a backend data model for Brands with fields: id, name, description, and logo URL",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Create a backend data model for Virtual Assistant Providers with fields: id, name, description, contact information, and payment per client",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Implement backend functionality to add and retrieve the list of Brands",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Implement backend functionality to add and retrieve Virtual Assistant Providers sorted by payment per client in descending order",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Pennywise",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

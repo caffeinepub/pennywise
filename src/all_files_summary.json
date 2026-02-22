@@ -1,0 +1,19 @@
+{
+  "backend/main.mo": "Motoko actor defining Brand and VirtualAssistantProvider types with in-memory storage (Map) and functions to add brands/providers and query them, including sorting providers by payment descending.",
+  "feature_evidence.json": "Feature evidence report documenting four implemented features: brands list page, providers sorted page with contact mechanism, and cohesive warm-colored visual theme, all with high confidence.",
+  "frontend-file-summaries.txt": "JSON-formatted summaries of eight frontend files covering routing, layout, pages (home/brands/providers), custom hooks for queries, and styling with warm professional color palette.",
+  "frontend/index.css": "Tailwind CSS base styles defining CSS custom properties for light and dark themes using OKLCH color space with neutral grayscale palette (no warm colors in this version).",
+  "frontend/index.html": "Minimal HTML entry point for the Pennywise app with root div and module script reference to main.tsx.",
+  "frontend/src/App.tsx": "TanStack Router setup defining root, index, brands, and providers routes, all wrapped in Layout component, with router provider as main app component.",
+  "frontend/src/components/Layout.tsx": "Layout component providing sticky header with logo and navigation buttons (Home/Brands/Providers), main content outlet, and footer with copyright and caffeine.ai attribution.",
+  "frontend/src/hooks/useActor.ts": "Custom hook managing backend actor creation with Internet Identity authentication, using React Query to cache actor instances and invalidate dependent queries on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing AuthClient lifecycle, login/logout flow, and identity state with configurable options.",
+  "frontend/src/hooks/useQueries.ts": "Custom React Query hooks (useGetAllBrands and useGetProvidersSortedByPayment) that fetch data from backend actor with proper dependency on actor availability.",
+  "frontend/src/index.css": "Tailwind CSS configuration with warm professional OKLCH color palette featuring amber/orange primary colors and earthy tones for light and dark modes, avoiding blue and purple.",
+  "frontend/src/main.tsx": "React application entry point setting up QueryClient and InternetIdentityProvider wrappers around the main App component and rendering to DOM.",
+  "frontend/src/pages/BrandsPage.tsx": "React page component that fetches and displays all brands in a responsive grid layout with cards showing brand logos, names, and descriptions, including loading skeletons and error handling.",
+  "frontend/src/pages/HomePage.tsx": "Landing page component featuring a hero section with call-to-action buttons, a features section highlighting platform benefits (trusted brands, top providers, quick contact), and a CTA section encouraging users to explore providers and brands.",
+  "frontend/src/pages/ProvidersPage.tsx": "React page component that displays virtual assistant providers sorted by payment per client in a card grid, with top 3 badges, pricing display, and a contact dialog modal for each provider showing their contact information.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration defining custom color scheme using OKLCH color space, typography settings with Inter and Cal Sans fonts, extended border radius values, custom shadows, and accordion animations for the UI component library.",
+  "project_state.json": "Project metadata tracking Pennywise platform development state, including completed features (brands page, providers listing, contact mechanism, visual theme) and pending feature requests for backend data models and API functionality."
+}

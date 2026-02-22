@@ -1,0 +1,97 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Create Pennywise platform with brands and virtual assistant provider listings",
+  "requirements": [
+    {
+      "id": "REQ-5",
+      "summary": "Create a frontend page displaying all Brands with name, description, and logo",
+      "acceptanceCriteria": [
+        "Brands page shows all brands retrieved from the backend",
+        "Each brand displays its name, description, and logo image",
+        "Page handles loading and error states appropriately"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/BrandsPage.tsx",
+          "operation": "create",
+          "description": "Create a Brands page component that fetches all brands using React Query and the getAllBrands backend method. Display each brand with its name, description, and logo image. Include loading and error state handling using appropriate UI feedback."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a route for the Brands page at /brands path and wire it into the application router. Include navigation link in the app header or navigation menu to make the Brands page accessible."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Create a frontend page displaying Virtual Assistant Providers sorted by payment per client with all provider details",
+      "acceptanceCriteria": [
+        "Providers page shows all providers sorted by payment per client (highest first)",
+        "Each provider card displays name, description, payment per client rate, and contact information",
+        "Page handles loading and error states appropriately"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProvidersPage.tsx",
+          "operation": "create",
+          "description": "Create a Providers page component that fetches providers using React Query and the getProvidersSortedByPayment backend method. Display each provider as a card showing name, description, payment per client rate, and contact information. The providers are already sorted by the backend. Include loading and error state handling."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a route for the Providers page at /providers path and wire it into the application router. Include navigation link in the app header or navigation menu to make the Providers page accessible."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Implement contact mechanism allowing clients to initiate contact with selected Virtual Assistant Provider",
+      "acceptanceCriteria": [
+        "Each provider listing has a contact button or link",
+        "Clicking contact displays the provider's contact information or opens a contact form",
+        "Contact interaction is clear and intuitive for clients"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProvidersPage.tsx",
+          "operation": "modify",
+          "description": "Add a contact button or action to each provider card. When clicked, display the provider's contact information in a modal, dialog, or expanded section. Ensure the contact mechanism is intuitive and clearly presents how clients can reach the provider."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Design cohesive visual theme with warm professional colors, modern typography, and clean layout",
+      "acceptanceCriteria": [
+        "Color palette uses warm, professional tones that convey trust",
+        "Typography is modern and readable across all pages",
+        "Layout is clean and consistent throughout the application",
+        "Design reinforces the professional nature of the platform"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles to establish a warm, professional color palette avoiding blue and purple. Use tones like warm grays, amber, orange, or earthy colors. Define modern, readable typography choices with appropriate font families, sizes, and weights."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend the Tailwind configuration with custom colors that reflect a warm, professional palette suitable for a business services platform. Define custom font family choices if needed to support modern typography. Ensure the configuration creates a cohesive design system."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create a Layout component that wraps all pages and provides consistent navigation, header, and footer structure. Apply the warm professional design theme through consistent spacing, borders, and background colors. Include navigation links to Brands and Providers pages."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap all routes with the Layout component to ensure consistent design and navigation throughout the application. This establishes the clean, professional layout across all pages."
+        }
+      ]
+    }
+  ]
+}

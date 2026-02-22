@@ -1,0 +1,141 @@
+{
+  "kind": "build_request",
+  "title": "Create Pennywise platform with brands and virtual assistant provider listings",
+  "projectName": "Pennywise",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a backend data model for Brands with fields: id, name, description, and logo URL",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Brand type is defined in the backend with all specified fields",
+        "Brands can be stored and retrieved from the backend"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create a backend data model for Virtual Assistant Providers with fields: id, name, description, contact information, and payment per client",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Virtual Assistant Provider type is defined with all specified fields including payment per client",
+        "Providers can be stored and retrieved from the backend"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement backend functionality to add and retrieve the list of Brands",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend exposes a query method to retrieve all brands",
+        "Backend exposes an update method to add new brands"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement backend functionality to add and retrieve Virtual Assistant Providers sorted by payment per client in descending order",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend exposes a query method to retrieve all providers sorted by payment per client (highest first)",
+        "Backend exposes an update method to add new providers"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a frontend page that displays a list of all Brands with their name, description, and logo",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Brands page shows all brands retrieved from the backend",
+        "Each brand displays its name, description, and logo image",
+        "Page handles loading and error states appropriately"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Create a frontend page that displays Virtual Assistant Providers listed in order of payment per client, showing name, description, payment rate, and contact information",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Providers page shows all providers sorted by payment per client (highest first)",
+        "Each provider card displays name, description, payment per client rate, and contact information",
+        "Page handles loading and error states appropriately"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement a contact mechanism on the frontend that allows clients to initiate contact with a selected Virtual Assistant Provider",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each provider listing has a contact button or link",
+        "Clicking contact displays the provider's contact information or opens a contact form",
+        "Contact interaction is clear and intuitive for clients"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Design a cohesive visual theme with warm, professional colors (avoiding blue and purple), modern typography, and a clean layout that emphasizes trust and professionalism suitable for a business services platform",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Color palette uses warm, professional tones that convey trust",
+        "Typography is modern and readable across all pages",
+        "Layout is clean and consistent throughout the application",
+        "Design reinforces the professional nature of the platform"
+      ]
+    }
+  ],
+  "constraints": [
+    "All backend logic must be implemented in a single Motoko actor",
+    "Frontend must use React with TypeScript, Tailwind CSS, and React Query",
+    "Do not modify immutable frontend paths including useInternetIdentity hooks, useActor hook, main.tsx, and ui components"
+  ],
+  "nonGoals": [
+    "User authentication or login system",
+    "Payment processing or transaction handling",
+    "Real-time chat or messaging between clients and providers",
+    "Advanced search or filtering functionality",
+    "Admin panel for managing brands and providers"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}
